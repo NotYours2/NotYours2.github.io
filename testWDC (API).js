@@ -38,7 +38,7 @@ myConnector.getSchema = function (schemaCallback) {
 
 
 myConnector.getData = function(table, doneCallback) {
-    $.getJSON("https://api.bls.gov/publicAPI/v2/timeseries/data/LAUCN040010000000005?latest=true&api_key=1639a51149b14e1f8b9bc2aab8635b78", function(resp) {
+    $.getJSON("https://api.bls.gov/publicAPI/v2/timeseries/data/LAUCN040010000000005?latest=false&api_key=1639a51149b14e1f8b9bc2aab8635b78", function(resp) {
         var feat = resp.Results.series[0].data,
             tableData = [];
 	
